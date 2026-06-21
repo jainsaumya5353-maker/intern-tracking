@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 InternTrack MVP
 
-## Getting Started
+**InternTrack** is a high-performance visibility platform designed to bridge the gap between interns and managers. It provides real-time task tracking, automated learning logs, and deep team analytics in a sleek, professional interface.
 
-First, run the development server:
+---
+
+## ✨ Key Features
+
+### 👨‍💻 For Interns
+- **Daily Task Logging**: Log tasks instantly as they are started or completed.
+- **Learning Repository**: Capture daily insights and "Aha!" moments to build a knowledge base.
+- **Micro-Timeline**: A dedicated Activity Log showing a beautiful chronological history of work.
+- **Manager-of-the-Day**: A dynamic banner showing which lead manager is on duty.
+
+### 📊 For Managers
+- **Team Intelligence**: A high-level dashboard showing active vs. idle status for every intern.
+- **Real-Time Tracking**: Drill down into any intern's specific history of tasks and learnings.
+- **Productivity Analytics**: Visual charts (Bar/Pie) showing goal velocity and team contribution.
+- **Team Reports**: Automated summaries for weekly review.
+
+---
+
+## 🛠️ Technical Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Database**: [Supabase](https://supabase.com/) (PostgreSQL)
+- **Authentication**: [Google OAuth](https://supabase.com/docs/guides/auth/social-login/auth-google) via Supabase SSR
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 🏁 Getting Started
+
+### 1. Environment Setup
+Create a `.env.local` file in the root directory and add your Supabase credentials:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Database Configuration
+Run the provided SQL script in `scripts/schema.sql` within your Supabase SQL Editor. This will set up:
+- Core tables (`users`, `managers`, `interns`, `tasks`, `learnings`, `activities`)
+- Advanced **Row Level Security (RLS)** policies for secure data access.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Installation
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is optimized for deployment on **Vercel**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Connect your repository to Vercel.
+2. Add your environment variables in the Vercel Dashboard.
+3. Update your **Redirect URIs** in Google Cloud Console and Supabase Auth settings to match your new production URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛡️ Security & Privacy
+InternTrack uses industry-standard RBAC (Role-Based Access Control). Managers can only see data for interns who have specifically assigned them as their mentor during onboarding.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+Created by **Saumya Jain**. Built for speed, visibility, and professional growth.
