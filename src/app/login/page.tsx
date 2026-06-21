@@ -24,10 +24,12 @@ export default function LoginPage() {
       <Card className="w-full max-w-[440px] border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] bg-white rounded-2xl overflow-hidden pt-4">
         <CardHeader className="space-y-4 text-center pb-8">
           <div className="flex justify-center">
-            <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 rotate-3 transform transition-transform hover:rotate-0">
-               <span className="text-white font-black text-2xl tracking-tighter">IT</span>
+            <div className="w-24 h-24 rounded-3xl bg-white flex items-center justify-center shadow-xl shadow-slate-200/40 overflow-hidden border border-slate-100 p-4">
+               <img src="/logo.png" className="w-full h-full object-contain" alt="InternTrack Logo" />
             </div>
           </div>
+
+
           <div className="space-y-2">
             <CardTitle className="text-3xl font-extrabold tracking-tight text-[#1E293B]">
               InternTrack

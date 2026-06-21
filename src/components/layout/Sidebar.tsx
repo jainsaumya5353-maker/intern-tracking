@@ -29,9 +29,13 @@ export function Sidebar() {
 
   return (
     <div className="w-64 bg-sidebar border-r border-sidebar-border h-full flex flex-col">
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-primary tracking-tight">InternTrack</h1>
+      <div className="p-6 flex items-center space-x-3">
+        <div className="w-10 h-10 rounded-xl bg-white overflow-hidden border border-sidebar-border shadow-sm flex-shrink-0 flex items-center justify-center p-1.5">
+           <img src="/logo.png" className="w-full h-full object-contain" alt="Logo" />
+        </div>
+        <h1 className="text-xl font-bold text-primary tracking-tighter truncate">InternTrack</h1>
       </div>
+      
       <nav className="flex-1 px-4 space-y-2">
         {navItems.map((item) => {
           const Icon = item.icon;
